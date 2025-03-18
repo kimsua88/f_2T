@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -7,66 +8,122 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Text Row"),
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
+        title: Text("Texte with Column Row2",
+          style: TextStyle(
+            fontWeight: FontWeight.bold
+          ),
+        ),
+        backgroundColor: Colors.amber,
         centerTitle: true,
-
       ),
 
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                  "유비",
-                  style: TextStyle(
-                      color: Colors.amber,
-                      backgroundColor: const Color.fromARGB(255, 199, 137, 158),
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    
+                    children: [
+                        Icon(
+                          Icons.email_rounded
+                      ),
+                      Text('james'),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Column(
+                            
+                            children: [
+                              
+                              Icon(
+                                Icons.email_rounded),
+                            ],
+                          ),
+                          
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Icon(
+                            Icons.account_circle
+                          ),
+                        ],
+                      ),
+                    ),
+                    ],
                   ),
                 ),
-              SizedBox(
-                width: 10,
-                ),
-              Text(
-                "장비",
-                style: TextStyle(
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                        Icon(
+                          Icons.account_circle
+                      ),
+                      Text('Cathy'),
 
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Column(
+                          children: [
+                            
+                            Text("james"),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Column(
+                          children: [
+                            Text('Cathy'),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  
                 ),
-                
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Text("관우"),
-            ],
-          
-          ),
-          Divider(
-            color: Colors.blue,
-          ),
-            Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("James"),
-              SizedBox(
-                width: 10,
-              ),
-              Text("Cathy"),
-              SizedBox(
-                width: 10,
-              ),
-              Text("Kenny"),
-            ],
-          
-          ),
-        ],
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                        Icon(
+                          Icons.email_rounded
+                      ),
+                      Text('james'),
+                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          children: [
+                            
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            
+           
+          ],
+        ),
       ),
-
 
     );
   }
